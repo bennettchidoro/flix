@@ -1,4 +1,7 @@
 <% @movies.each do |movie| %>
+  <section class="image">
+    <%= image_tag(movie.image_file_name) %>
+  </section>
   <section class="movie">
     <div class="summary">
       <h2>
