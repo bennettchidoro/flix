@@ -5,7 +5,7 @@ class Movie < ApplicationRecord
 
   validates :description, length: { minimum: 25 }
 
-  validates :total_gross, numericality: { greater_that_or_equal_to: 0 }
+  validates :total_gross, numericality: { greater_than_or_equal_to: 0 }
 
   validates :image_file_name, format: {
     with: /\w+\.(jpg|png)\z/i,
