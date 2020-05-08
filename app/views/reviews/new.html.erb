@@ -3,10 +3,8 @@
 <%= render "shared/errors", object: @review %>
 
 <%= form_with(model: [@movie, @review], local: true) do |f| %>
-  <%= f.label :name, autofocus: true %>
-  <%= f.text_field :name %>
 
-  <%= f.label :stars %>
+  <%= f.label :stars, autofocus: true %>
   <% Review::STARS.each do |star|  %>
     <span class="star">
       <%= f.radio_button :stars, star %>
